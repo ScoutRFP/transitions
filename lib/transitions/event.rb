@@ -56,7 +56,7 @@ module Transitions
         end
       end
       # Update timestamps on obj if a timestamp has been defined
-      update_event_timestamp(obj, next_state) if timestamp_defined?
+      update_event_timestamp(obj, next_state) if timestamp_defined? && next_state
       next_state
     end
 
